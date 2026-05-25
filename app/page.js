@@ -1,5 +1,3 @@
-"use client";
-
 export default function HomePage() {
   return (
     <main className="relative w-full min-h-screen overflow-hidden text-white">
@@ -24,7 +22,7 @@ export default function HomePage() {
       <header className="relative z-20 w-full absolute top-0 left-0">
 
         {/* MENU */}
-        <nav className="w-full flex flex-wrap justify-center items-center gap-4 md:gap-10 lg:gap-16 py-5 md:py-8 lg:py-10 text-sm md:text-2xl lg:text-3xl font-black uppercase tracking-[2px] md:tracking-[4px] text-white backdrop-blur-sm px-4">
+        <nav className="hidden md:flex w-full justify-center items-center gap-10 lg:gap-16 py-8 lg:py-10 text-2xl lg:text-3xl font-black uppercase tracking-[4px] text-white backdrop-blur-sm px-4">
 
           <a
             href="/"
