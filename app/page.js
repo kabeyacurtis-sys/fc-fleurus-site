@@ -1,3 +1,5 @@
+"use client";
+
 export default function HomePage() {
   return (
     <main className="relative w-full min-h-screen overflow-hidden text-white">
@@ -21,52 +23,72 @@ export default function HomePage() {
       {/* HEADER */}
       <header className="relative z-20 w-full absolute top-0 left-0">
 
-        {/* MENU */}
-        <nav className="hidden md:flex w-full justify-center items-center gap-10 lg:gap-16 py-8 lg:py-10 text-2xl lg:text-3xl font-black uppercase tracking-[4px] text-white backdrop-blur-sm px-4">
+        {/* MENU MOBILE + TABLETTE + PC */}
+        <div className="fixed top-4 left-4 z-50">
 
-          <a
-            href="/"
-            className="text-white hover:text-yellow-400 transition duration-300 drop-shadow-[0_0_10px_rgba(255,255,255,0.9)]"
-          >
-            Accueil
-          </a>
+          <details className="group">
 
-          <a
-            href="/club"
-            className="text-white hover:text-yellow-400 transition duration-300 drop-shadow-[0_0_10px_rgba(255,255,255,0.9)]"
-          >
-            Club
-          </a>
+            {/* BOUTON MENU */}
+            <summary className="list-none cursor-pointer bg-yellow-400 text-black font-black uppercase px-5 py-3 rounded-2xl shadow-[0_0_20px_rgba(255,215,0,0.5)] text-base md:text-lg tracking-[1px] flex items-center justify-center w-[140px]">
 
-          <a
-            href="/galerie"
-            className="text-white hover:text-yellow-400 transition duration-300 drop-shadow-[0_0_10px_rgba(255,255,255,0.9)]"
-          >
-            Galerie
-          </a>
+              ☰ MENU
 
-          <a
-            href="/contact"
-            className="text-white hover:text-yellow-400 transition duration-300 drop-shadow-[0_0_10px_rgba(255,255,255,0.9)]"
-          >
-            Contact
-          </a>
+            </summary>
 
-          <a
-            href="/sponsors"
-            className="text-white hover:text-yellow-400 transition duration-300 drop-shadow-[0_0_10px_rgba(255,255,255,0.9)]"
-          >
-            Sponsors
-          </a>
+            {/* MENU OUVERT */}
+            <div className="mt-4 bg-black/95 backdrop-blur-xl border border-yellow-500/30 rounded-3xl p-6 w-[250px] shadow-2xl">
 
-          <a
-            href="/inscription"
-            className="text-white hover:text-yellow-400 transition duration-300 drop-shadow-[0_0_10px_rgba(255,255,255,0.9)]"
-          >
-            Inscription
-          </a>
+              <div className="flex flex-col gap-5 text-yellow-400 text-xl font-black uppercase tracking-[2px]">
 
-        </nav>
+                <a
+                  href="/"
+                  className="text-yellow-400 hover:text-yellow-300 transition duration-300"
+                >
+                  Accueil
+                </a>
+
+                <a
+                  href="/club"
+                  className="text-yellow-400 hover:text-yellow-300 transition duration-300"
+                >
+                  Club
+                </a>
+
+                <a
+                  href="/galerie"
+                  className="text-yellow-400 hover:text-yellow-300 transition duration-300"
+                >
+                  Galerie
+                </a>
+
+                <a
+                  href="/contact"
+                  className="text-yellow-400 hover:text-yellow-300 transition duration-300"
+                >
+                  Contact
+                </a>
+
+                <a
+                  href="/sponsors"
+                  className="text-yellow-400 hover:text-yellow-300 transition duration-300"
+                >
+                  Sponsors
+                </a>
+
+                <a
+                  href="/inscription"
+                  className="text-yellow-400 hover:text-yellow-300 transition duration-300"
+                >
+                  Inscription
+                </a>
+
+              </div>
+
+            </div>
+
+          </details>
+
+        </div>
 
       </header>
 
