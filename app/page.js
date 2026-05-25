@@ -23,45 +23,52 @@ export default function HomePage() {
       {/* HEADER */}
       <header className="relative z-20 w-full absolute top-0 left-0">
 
-        {/* MENU */}
-        <nav className="w-full flex flex-wrap justify-center items-center gap-4 md:gap-10 lg:gap-16 py-5 md:py-8 lg:py-10 text-sm md:text-2xl lg:text-3xl font-black uppercase tracking-[2px] md:tracking-[4px] text-white backdrop-blur-sm px-4">
+{/* MENU */}
+<nav className="w-full flex flex-wrap justify-center items-center gap-4 md:gap-10 lg:gap-16 py-5 md:py-8 lg:py-10 text-sm md:text-2xl lg:text-3xl font-black uppercase tracking-[2px] md:tracking-[4px] text-white backdrop-blur-sm px-4">
 
-          <a
-            href="/club"
-            className="hover:text-yellow-400 transition duration-300"
-          >
-            Club
-          </a>
+  <a
+    href="/"
+    className="text-white hover:text-yellow-400 transition duration-300"
+  >
+    Accueil
+  </a>
 
-          <a
-            href="/galerie"
-            className="text-yellow-400 hover:text-white transition duration-300"
-          >
-            Galerie
-          </a>
+  <a
+    href="/club"
+    className="text-white hover:text-yellow-400 transition duration-300"
+  >
+    Club
+  </a>
 
-          <a
-            href="/contact"
-            className="hover:text-yellow-400 transition duration-300"
-          >
-            Contact
-          </a>
+  <a
+    href="/galerie"
+    className="text-white hover:text-yellow-400 transition duration-300"
+  >
+    Galerie
+  </a>
 
-          <a
-            href="/sponsors"
-            className="text-yellow-400 hover:text-white transition duration-300"
-          >
-            Sponsors
-          </a>
+  <a
+    href="/contact"
+    className="text-white hover:text-yellow-400 transition duration-300"
+  >
+    Contact
+  </a>
 
-          <a
-            href="/inscription"
-            className="hover:text-yellow-400 transition duration-300"
-          >
-            Inscription
-          </a>
+  <a
+    href="/sponsors"
+    className="text-white hover:text-yellow-400 transition duration-300"
+  >
+    Sponsors
+  </a>
 
-        </nav>
+  <a
+    href="/inscription"
+    className="text-white hover:text-yellow-400 transition duration-300"
+  >
+    Inscription
+  </a>
+
+</nav>
 
       </header>
 

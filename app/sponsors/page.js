@@ -95,81 +95,81 @@ export default function SponsorsPage() {
   </div>
 
   {/* GRID PHOTOS */}
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 max-w-5xl mx-auto">
+<div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 max-w-5xl mx-auto">
 
-    {/* PHOTO 1 */}
-    <div className="aspect-square bg-zinc-900 border border-yellow-500/20 rounded-2xl p-3 flex items-center justify-center">
-      <img
-        src="/maillotdom.png"
-        alt="Maillot domicile"
-        className="w-full h-full object-contain"
-      />
-    </div>
-
-    {/* PHOTO 2 */}
-    <div className="aspect-square bg-zinc-900 border border-yellow-500/20 rounded-2xl p-3 flex items-center justify-center">
-      <img
-        src="/maillotext.png"
-        alt="Maillot extérieur"
-        className="w-full h-full object-contain"
-      />
-    </div>
-
-    {/* PHOTO 3 */}
-    <div className="aspect-square bg-zinc-900 border border-yellow-500/20 rounded-2xl p-3 flex items-center justify-center">
-      <img
-        src="/training.png"
-        alt="Training"
-        className="w-full h-full object-contain"
-      />
-    </div>
-
-    {/* PHOTO 4 */}
-    <div className="aspect-square bg-zinc-900 border border-yellow-500/20 rounded-2xl p-3 flex items-center justify-center">
-      <img
-        src="/pull.png"
-        alt="Pull"
-        className="w-full h-full object-contain"
-      />
-    </div>
-
-    {/* PHOTO 5 */}
-    <div className="aspect-square bg-zinc-900 border border-yellow-500/20 rounded-2xl p-3 flex items-center justify-center">
-      <img
-        src="/polo.png"
-        alt="Polo"
-        className="w-full h-full object-contain"
-      />
-    </div>
-
-    {/* PHOTO 6 */}
-    <div className="aspect-square bg-zinc-900 border border-yellow-500/20 rounded-2xl p-3 flex items-center justify-center">
-      <img
-        src="/veste.png"
-        alt="Veste"
-        className="w-full h-full object-contain"
-      />
-    </div>
-
-    {/* PHOTO 7 */}
-    <div className="aspect-square bg-zinc-900 border border-yellow-500/20 rounded-2xl p-3 flex items-center justify-center">
-      <img
-        src="/sac.png"
-        alt="Sac"
-        className="w-full h-full object-contain"
-      />
-    </div>
-
-    {/* PHOTO 8 */}
-    <div className="aspect-square bg-zinc-900 border border-yellow-500/20 rounded-2xl p-3 flex items-center justify-center">
-      <img
-        src="/ballon.png"
-        alt="Ballon"
-        className="w-full h-full object-contain"
-      />
-    </div>
-
+  {/* PHOTO 1 */}
+  <div className="aspect-square bg-white border border-yellow-500/20 rounded-2xl p-3 flex items-center justify-center">
+    <img
+      src="/maillotdom.png"
+      alt="Maillot domicile"
+      className="w-full h-full object-contain"
+    />
   </div>
+
+  {/* PHOTO 2 */}
+  <div className="aspect-square bg-white border border-yellow-500/20 rounded-2xl p-3 flex items-center justify-center">
+    <img
+      src="/maillotext.png"
+      alt="Maillot extérieur"
+      className="w-full h-full object-contain"
+    />
+  </div>
+
+  {/* PHOTO 3 */}
+  <div className="aspect-square bg-white border border-yellow-500/20 rounded-2xl p-3 flex items-center justify-center">
+    <img
+      src="/training.png"
+      alt="Training"
+      className="w-full h-full object-contain"
+    />
+  </div>
+
+  {/* PHOTO 4 */}
+  <div className="aspect-square bg-white border border-yellow-500/20 rounded-2xl p-3 flex items-center justify-center">
+    <img
+      src="/pull.png"
+      alt="Pull"
+      className="w-full h-full object-contain"
+    />
+  </div>
+
+  {/* PHOTO 5 */}
+  <div className="aspect-square bg-white border border-yellow-500/20 rounded-2xl p-3 flex items-center justify-center">
+    <img
+      src="/polo.png"
+      alt="Polo"
+      className="w-full h-full object-contain"
+    />
+  </div>
+
+  {/* PHOTO 6 */}
+  <div className="aspect-square bg-white border border-yellow-500/20 rounded-2xl p-3 flex items-center justify-center">
+    <img
+      src="/veste.png"
+      alt="Veste"
+      className="w-full h-full object-contain"
+    />
+  </div>
+
+  {/* PHOTO 7 */}
+  <div className="aspect-square bg-white border border-yellow-500/20 rounded-2xl p-3 flex items-center justify-center">
+    <img
+      src="/sac.png"
+      alt="Sac"
+      className="w-full h-full object-contain"
+    />
+  </div>
+
+  {/* PHOTO 8 */}
+  <div className="aspect-square bg-white border border-yellow-500/20 rounded-2xl p-3 flex items-center justify-center">
+    <img
+      src="/ballon.png"
+      alt="Ballon"
+      className="w-full h-full object-contain"
+    />
+  </div>
+
+</div>
 
 </section>
 
