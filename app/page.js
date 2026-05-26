@@ -21,76 +21,7 @@ export default function HomePage() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/80"></div>
 
       {/* HEADER */}
-      <header className="relative z-20 w-full absolute top-0 left-0">
-
-        {/* MENU MOBILE + TABLETTE + PC */}
-        <div className="fixed top-4 left-4 z-50">
-
-          <details className="group">
-
-            {/* BOUTON MENU */}
-            <summary className="list-none cursor-pointer bg-yellow-400 text-black font-black uppercase px-5 py-3 rounded-2xl shadow-[0_0_20px_rgba(255,215,0,0.5)] text-base md:text-lg tracking-[1px] flex items-center justify-center w-[140px]">
-
-              ☰ MENU
-
-            </summary>
-
-            {/* MENU OUVERT */}
-            <div className="mt-4 bg-black/95 backdrop-blur-xl border border-yellow-500/30 rounded-3xl p-6 w-[250px] shadow-2xl">
-
-              <div className="flex flex-col gap-5 text-yellow-400 text-xl font-black uppercase tracking-[2px]">
-
-                <a
-                  href="/"
-                  className="text-yellow-400 hover:text-yellow-300 transition duration-300"
-                >
-                  Accueil
-                </a>
-
-                <a
-                  href="/club"
-                  className="text-yellow-400 hover:text-yellow-300 transition duration-300"
-                >
-                  Club
-                </a>
-
-                <a
-                  href="/galerie"
-                  className="text-yellow-400 hover:text-yellow-300 transition duration-300"
-                >
-                  Galerie
-                </a>
-
-                <a
-                  href="/contact"
-                  className="text-yellow-400 hover:text-yellow-300 transition duration-300"
-                >
-                  Contact
-                </a>
-
-                <a
-                  href="/sponsors"
-                  className="text-yellow-400 hover:text-yellow-300 transition duration-300"
-                >
-                  Sponsors
-                </a>
-
-                <a
-                  href="/inscription"
-                  className="text-yellow-400 hover:text-yellow-300 transition duration-300"
-                >
-                  Inscription
-                </a>
-
-              </div>
-
-            </div>
-
-          </details>
-
-        </div>
-
-      </header>
+      <header className="relative z-20 w-full absolute top-0 left-0"></header>
 
       {/* CONTENU PRINCIPAL */}
       <section className="relative z-10 flex flex-col items-center justify-center text-center min-h-screen px-4 md:px-6">
@@ -123,14 +54,14 @@ export default function HomePage() {
 
           <a
             href="/club"
-            className="bg-yellow-400 hover:bg-yellow-300 text-black font-black text-base sm:text-xl md:text-2xl px-8 md:px-14 py-4 md:py-6 rounded-3xl transition-all duration-300 shadow-[0_0_40px_rgba(255,215,0,0.5)] hover:scale-105 text-center"
+            className="bg-yellow-400 hover:bg-yellow-300 text-black font-black text-base sm:text-xl md:text-2xl px-8 md:px-14 py-4 md:py-6 rounded-3xl transition-all duration-300 shadow-[0_0_40px_rgba(255,215,0,0.5)] hover:scale-105 text-center border-b-4 border-yellow-600"
           >
             Découvrir le club
           </a>
 
           <a
             href="/inscription"
-            className="border-2 border-white bg-white/10 backdrop-blur-md hover:bg-white hover:text-black text-white font-black text-base sm:text-xl md:text-2xl px-8 md:px-14 py-4 md:py-6 rounded-3xl transition-all duration-300 text-center"
+            className="border-2 border-white border-b-4 bg-white/10 backdrop-blur-md hover:bg-white hover:text-black text-white font-black text-base sm:text-xl md:text-2xl px-8 md:px-14 py-4 md:py-6 rounded-3xl transition-all duration-300 text-center"
           >
             Rejoindre le club
           </a>
