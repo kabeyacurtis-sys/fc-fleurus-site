@@ -53,13 +53,6 @@ export default function RootLayout({ children }) {
               </a>
 
               <a
-                href="/galerie"
-                className="text-yellow-400 hover:text-white transition duration-300"
-              >
-                Galerie
-              </a>
-
-              <a
                 href="/sponsors"
                 className="text-yellow-400 hover:text-white transition duration-300"
               >
