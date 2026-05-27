@@ -1,3 +1,5 @@
+"use client";
+
 export default function ClubPage() {
   return (
     <div className="w-full min-h-screen bg-black text-white overflow-x-hidden">
@@ -79,6 +81,27 @@ export default function ClubPage() {
           <form
             action="https://formsubmit.co/footballclubfleurus@hotmail.com"
             method="POST"
+onSubmit={(e) => {
+  e.preventDefault();
+
+  const form = e.target;
+
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+  }).then(() => {
+
+    const message = document.getElementById("success-message");
+
+    message.classList.remove("hidden");
+
+    setTimeout(() => {
+      message.classList.add("hidden");
+      form.reset();
+    }, 5000);
+
+  });
+}}
             className="space-y-8 md:space-y-10 max-w-3xl mx-auto"
           >
 
@@ -94,7 +117,7 @@ export default function ClubPage() {
             <input
               type="hidden"
               name="_next"
-              value="http://localhost:3000/inscription"
+              value="https://fc-fleurus.vercel.app/inscription"
             />
 
             {/* NOM */}
@@ -108,6 +131,7 @@ export default function ClubPage() {
                 type="text"
                 name="Nom"
                 placeholder="Votre nom"
+                required
                 className="w-full bg-zinc-950 border border-zinc-700 rounded-2xl px-4 md:px-6 py-4 md:py-5 text-white text-base md:text-xl focus:outline-none focus:border-yellow-400"
               />
 
@@ -124,6 +148,7 @@ export default function ClubPage() {
                 type="text"
                 name="Prenom"
                 placeholder="Votre prénom"
+                required
                 className="w-full bg-zinc-950 border border-zinc-700 rounded-2xl px-4 md:px-6 py-4 md:py-5 text-white text-base md:text-xl focus:outline-none focus:border-yellow-400"
               />
 
@@ -140,6 +165,7 @@ export default function ClubPage() {
                 type="text"
                 name="Date"
                 placeholder="jj/mm/aaaa"
+                required
                 className="w-full bg-zinc-950 border border-zinc-700 rounded-2xl px-4 md:px-6 py-4 md:py-5 text-white text-base md:text-xl focus:outline-none focus:border-yellow-400"
               />
 
@@ -156,6 +182,7 @@ export default function ClubPage() {
                 type="email"
                 name="Email"
                 placeholder="Votre adresse e-mail"
+                required
                 className="w-full bg-zinc-950 border border-zinc-700 rounded-2xl px-4 md:px-6 py-4 md:py-5 text-white text-base md:text-xl focus:outline-none focus:border-yellow-400"
               />
 
@@ -172,6 +199,7 @@ export default function ClubPage() {
                 type="text"
                 name="Adresse"
                 placeholder="Votre adresse complète"
+                required
                 className="w-full bg-zinc-950 border border-zinc-700 rounded-2xl px-4 md:px-6 py-4 md:py-5 text-white text-base md:text-xl focus:outline-none focus:border-yellow-400"
               />
 
@@ -188,6 +216,7 @@ export default function ClubPage() {
                 type="text"
                 name="Telephone"
                 placeholder="+32 ..."
+                required
                 className="w-full bg-zinc-950 border border-zinc-700 rounded-2xl px-4 md:px-6 py-4 md:py-5 text-white text-base md:text-xl focus:outline-none focus:border-yellow-400"
               />
 
@@ -209,15 +238,21 @@ export default function ClubPage() {
 
             </div>
 
-{/* BOUTON */}
-<div className="text-center pt-4 md:pt-6 flex justify-center">
+            {/* BOUTON */}
+            <div className="text-center pt-4 md:pt-6 flex justify-center">
 
               <button
-               type="submit"
-               className="bg-white hover:bg-zinc-100 text-black font-black text-lg sm:text-xl md:text-2xl px-10 md:px-14 py-4 md:py-5 rounded-2xl transition-all duration-300 shadow-2xl hover:scale-105 border-2 border-white flex items-center justify-center min-w-[260px]"
-               >
-              <span className="text-black">
-      Valider la demande
+                type="submit"
+                className="bg-white hover:bg-zinc-100 text-black font-black text-lg sm:text-xl md:text-2xl px-10 md:px-14 py-4 md:py-5 rounded-2xl transition-all duration-300 shadow-2xl hover:scale-105 border-2 border-white flex items-center justify-center min-w-[260px]"
+              >
+                <span className="text-black">
+                  Valider la demande
+                  <div
+  id="success-message"
+  className="hidden mt-8 bg-yellow-400 text-black font-black text-center px-6 py-5 rounded-2xl shadow-[0_0_30px_rgba(255,215,0,0.4)] text-base md:text-xl"
+>
+  ✅ Votre demande d’inscription a bien été envoyée au FC Fleurus.
+</div>
                 </span>
               </button>
 
