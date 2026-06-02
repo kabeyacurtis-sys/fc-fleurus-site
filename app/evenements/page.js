@@ -61,7 +61,7 @@ export default function EvenementsPage() {
               <div
                 key={index}
                 className="
-                  bg-white/85
+                  bg-black/85
                   backdrop-blur-md
                   rounded-3xl
                   overflow-hidden
