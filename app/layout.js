@@ -59,6 +59,13 @@ export default function RootLayout({ children }) {
                 Sponsors
               </a>
 
+<a
+  href="/evenements"
+  className="text-yellow-400 hover:text-white transition duration-300"
+>
+  Événements
+</a>
+
               <a
                 href="/inscription"
                 className="text-yellow-400 hover:text-white transition duration-300"
