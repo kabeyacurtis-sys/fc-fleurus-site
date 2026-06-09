@@ -137,6 +137,26 @@ export default function ClubPage() {
 
             </div>
 
+             {/* DIRECTEUR COMMERCIAL */}
+            <div className="bg-black border border-yellow-500/20 rounded-3xl p-6 md:p-10 text-center hover:border-yellow-400 transition-all duration-300">
+
+              <div className="w-24 h-24 md:w-36 md:h-36 rounded-full bg-zinc-800 mx-auto mb-6 md:mb-8 flex items-center justify-center text-4xl md:text-6xl">
+              </div>
+
+              <h3 className="text-2xl md:text-3xl font-black mb-3 md:mb-4">
+                Directeur Commercial
+              </h3>
+
+              <p className="text-yellow-400 text-lg md:text-2xl font-semibold mb-4 md:mb-5">
+                Olivier Vande Velde
+              </p>
+
+              <p className="text-zinc-400 text-sm md:text-lg break-words">
+                📩 Olivdv1@hotmail.be
+              </p>
+
+            </div>
+
             {/* CELLULE SPORTIVE */}
 <div className="bg-black border border-yellow-500/20 rounded-3xl p-6 md:p-10 text-center hover:border-yellow-400 transition-all duration-300">
 
