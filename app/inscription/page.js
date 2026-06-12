@@ -1,6 +1,9 @@
 "use client";
 
+import { useState } from "react";
+
 export default function ClubPage() {
+  const [success, setSuccess] = useState(false);
   return (
     <div className="w-full min-h-screen bg-black text-white overflow-x-hidden">
 
@@ -67,9 +70,9 @@ export default function ClubPage() {
           {/* TITRE */}
           <div className="text-center mb-10 md:mb-16">
 
-            <h2 className="text-3xl sm:text-5xl md:text-6xl font-black text-yellow-400 mb-4 md:mb-6">
-              Inscription FC Fleurus
-            </h2>
+           <h2 className="text-4xl sm:text-6xl md:text-7xl font-black text-yellow-400 mb-4 md:mb-6 drop-shadow-[0_0_20px_rgba(255,215,0,0.5)]">
+  Inscription FC Fleurus
+</h2>
 
             <p className="text-zinc-300 text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-2">
               Complétez le formulaire ci-dessous afin d’inscrire un joueur au sein du club.
@@ -79,46 +82,41 @@ export default function ClubPage() {
 
           {/* FORMULAIRE */}
           <form
-            action="https://formsubmit.co/footballclubfleurus@hotmail.com"
-            method="POST"
-onSubmit={(e) => {
+
+onSubmit={async (e) => {
   e.preventDefault();
 
-  const form = e.target;
+  const formData = {
+    type: e.target.type.value,
+    nom: e.target.Nom.value,
+    prenom: e.target.Prenom.value,
+    date: e.target.Date.value,
+    email: e.target.Email.value,
+    adresse: e.target.Adresse.value,
+    telephone: e.target.Telephone.value,
+    demande: e.target.Demandes.value,
+  };
 
-  fetch(form.action, {
+  const response = await fetch("/api/contact", {
     method: "POST",
-    body: new FormData(form),
-  }).then(() => {
-
-    const message = document.getElementById("success-message");
-
-    message.classList.remove("hidden");
-
-    setTimeout(() => {
-      message.classList.add("hidden");
-      form.reset();
-    }, 5000);
-
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
   });
+
+if (response.ok) {
+  setSuccess(true);
+
+  setTimeout(() => {
+    setSuccess(false);
+  }, 8000);
+
+  e.target.reset();
+}
 }}
             className="space-y-8 md:space-y-10 max-w-3xl mx-auto"
           >
-
-            {/* CONFIG MAIL */}
-            <input type="hidden" name="_captcha" value="false" />
-
-            <input
-              type="hidden"
-              name="_subject"
-              value="Nouvelle inscription FC Fleurus"
-            />
-
-            <input
-              type="hidden"
-              name="_next"
-              value="https://fc-fleurus.vercel.app/inscription"
-            />
 
             {/* NOM */}
             <div className="flex flex-col gap-3">
@@ -222,6 +220,17 @@ onSubmit={(e) => {
 
             </div>
 
+<select
+  name="type"
+  required
+  className="w-full bg-zinc-950 border border-zinc-700 rounded-2xl px-6 py-5 text-white"
+>
+  <option value="">Choisir</option>
+  <option value="Affiliation">Affiliation</option>
+  <option value="Stage">Stage</option>
+  <option value="Renseignement">Renseignement</option>
+</select>
+
             {/* DEMANDES */}
             <div className="flex flex-col gap-3">
 
@@ -238,23 +247,37 @@ onSubmit={(e) => {
 
             </div>
 
-            {/* BOUTON */}
-            <div className="text-center pt-4 md:pt-6 flex justify-center">
+{/* BOUTON */}
+<div className="text-center pt-4 md:pt-6 flex flex-col items-center">
 
-              <button
-                type="submit"
-                className="bg-white hover:bg-zinc-100 text-black font-black text-lg sm:text-xl md:text-2xl px-10 md:px-14 py-4 md:py-5 rounded-2xl transition-all duration-300 shadow-2xl hover:scale-105 border-2 border-white flex items-center justify-center min-w-[260px]"
-              >
-                <span className="text-black">
-                  Valider la demande
-                  <div
-  id="success-message"
-  className="hidden mt-8 bg-yellow-400 text-black font-black text-center px-6 py-5 rounded-2xl shadow-[0_0_30px_rgba(255,215,0,0.4)] text-base md:text-xl"
->
-  ✅ Votre demande d’inscription a bien été envoyée au FC Fleurus.
-</div>
-                </span>
-              </button>
+  <button
+    type="submit"
+    className="bg-white hover:bg-zinc-100 text-black font-black text-lg sm:text-xl md:text-2xl px-10 md:px-14 py-4 md:py-5 rounded-2xl transition-all duration-300 shadow-2xl hover:scale-105 border-2 border-white min-w-[260px]"
+  >
+    Valider la demande
+  </button>
+
+{success && (
+  <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/90 backdrop-blur-md">
+    <div className="text-center px-8">
+
+      <div className="text-7xl md:text-9xl mb-8">
+        ✅
+      </div>
+
+      <h2 className="text-3xl md:text-6xl font-black text-green-400 mb-4">
+        DEMANDE ENVOYÉE
+      </h2>
+
+      <p className="text-white text-lg md:text-3xl font-semibold max-w-3xl">
+        Votre demande a bien été transmise au FC Fleurus.
+        <br />
+        Nous vous recontacterons dans les plus brefs délais.
+      </p>
+
+    </div>
+  </div>
+)}
 
             </div>
 

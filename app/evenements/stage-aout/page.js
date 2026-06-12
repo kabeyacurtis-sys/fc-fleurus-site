@@ -2,7 +2,7 @@
 
 export default function ClubPage() {
   return (
-      <div className="w-full min-h-screen bg-black text-white overflow-x-hidden">
+    <div className="w-full min-h-screen bg-black text-white overflow-x-hidden">
 
       {/* HERO */}
       <section className="relative w-full min-h-screen overflow-hidden">
@@ -11,7 +11,7 @@ export default function ClubPage() {
         <div
           className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('/stage2.png')",
+            backgroundImage: "url('/inscription.png')",
           }}
         ></div>
 
@@ -41,34 +41,18 @@ export default function ClubPage() {
           </p>
 
           {/* BOUTON */}
-<div className="mt-6 md:mt-10">
+          <div className="mt-6 md:mt-10">
 
-</div>
+<a
+  href="#inscription"
+  className="bg-yellow-400 hover:bg-yellow-300 text-black font-black text-sm sm:text-lg md:text-xl px-8 md:px-12 py-3 md:py-5 rounded-2xl transition-all duration-300 shadow-[0_0_25px_rgba(255,215,0,0.4)] hover:scale-105"
+>
+  M'INSCRIRE AU STAGE
+</a>
 
-  <div className="inline-block p-1 rounded-3xl border-2 border-white shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+          </div>
 
-    <a
-      href="#inscription"
-      className="
-        block
-        bg-yellow-400
-        hover:bg-yellow-300
-        text-black
-        font-black
-        text-sm sm:text-lg md:text-xl
-        px-8 md:px-12
-        py-3 md:py-5
-        rounded-2xl
-        transition-all duration-300
-        hover:scale-105
-      "
-    >
-      M'INSCRIRE AU STAGE
-    </a>
-
-  </div>
-
-</div>
+        </div>
 
       </section>
 
@@ -81,7 +65,7 @@ export default function ClubPage() {
             <h3 className="text-yellow-400 text-2xl font-black mb-4">
               DATES
             </h3>
-            <p>03 → 07 aout 2026</p>
+            <p>03 → 07 août 2026</p>
           </div>
 
           <div className="bg-zinc-900 p-8 rounded-3xl">
@@ -177,47 +161,44 @@ export default function ClubPage() {
     </h2>
 
        {/* FORMULAIRE */}
-          <form
-            action="https://formsubmit.co/footballclubfleurus@hotmail.com"
-            method="POST"
-onSubmit={(e) => {
-  e.preventDefault();
+<form
+  onSubmit={async (e) => {
+    e.preventDefault();
 
-  const form = e.target;
+    const formData = {
+      type: e.target.type.value,
+      nom: e.target.Nom.value,
+      prenom: e.target.Prenom.value,
+      date: e.target.Date.value,
+      email: e.target.Email.value,
+      adresse: e.target.Adresse.value,
+      telephone: e.target.Telephone.value,
+      demande: e.target.Demandes.value,
+    };
 
-  fetch(form.action, {
-    method: "POST",
-    body: new FormData(form),
-  }).then(() => {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
 
-    const message = document.getElementById("success-message");
+    if (response.ok) {
+      const message = document.getElementById("success-message");
 
-    message.classList.remove("hidden");
+      message.classList.remove("hidden");
 
-    setTimeout(() => {
-      message.classList.add("hidden");
-      form.reset();
-    }, 5000);
+      setTimeout(() => {
+        message.classList.add("hidden");
+      }, 8000);
 
-  });
-}}
-            className="space-y-8 md:space-y-10 max-w-3xl mx-auto"
+      e.target.reset();
+    }
+  }}
+
+              className="space-y-8 md:space-y-10 max-w-3xl mx-auto"
           >
-
-            {/* CONFIG MAIL */}
-            <input type="hidden" name="_captcha" value="false" />
-
-            <input
-              type="hidden"
-              name="_subject"
-              value="Nouvelle inscription FC Fleurus"
-            />
-
-            <input
-              type="hidden"
-              name="_next"
-              value="https://fc-fleurus.vercel.app/inscription"
-            />
 
             {/* NOM */}
             <div className="flex flex-col gap-3">
@@ -320,6 +301,26 @@ onSubmit={(e) => {
               />
 
             </div>
+
+{/* type de demande */}
+<div className="flex flex-col gap-3">
+
+  <label className="text-yellow-400 text-lg sm:text-xl md:text-2xl font-bold">
+    Type de demande :
+  </label>
+
+  <select
+    name="type"
+    required
+    className="w-full bg-zinc-950 border border-zinc-700 rounded-2xl px-6 py-5 text-white"
+  >
+    <option value="">Choisir</option>
+    <option value="Affiliation">Affiliation</option>
+    <option value="Stage">Stage</option>
+    <option value="Renseignement">Renseignement</option>
+  </select>
+
+</div>
 
             {/* DEMANDES */}
             <div className="flex flex-col gap-3">

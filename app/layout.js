@@ -59,6 +59,27 @@ export default function RootLayout({ children }) {
                 Sponsors
               </a>
 
+                                          <a
+                href="/Seniors"
+                className="text-yellow-400 hover:text-white transition duration-300"
+              >
+                Seniors
+              </a>
+
+               <a
+                href="/Coaches"
+                className="text-yellow-400 hover:text-white transition duration-300"
+               >
+                Coaches
+               </a>
+
+               <a
+                href="/Jeunes"
+                className="text-yellow-400 hover:text-white transition duration-300"
+               >
+                Jeunes
+               </a>
+
 <a
   href="/evenements"
   className="text-yellow-400 hover:text-white transition duration-300"

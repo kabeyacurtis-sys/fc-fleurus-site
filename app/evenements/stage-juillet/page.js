@@ -161,47 +161,44 @@ export default function ClubPage() {
     </h2>
 
        {/* FORMULAIRE */}
-          <form
-            action="https://formsubmit.co/footballclubfleurus@hotmail.com"
-            method="POST"
-onSubmit={(e) => {
-  e.preventDefault();
+<form
+  onSubmit={async (e) => {
+    e.preventDefault();
 
-  const form = e.target;
+    const formData = {
+      type: e.target.type.value,
+      nom: e.target.Nom.value,
+      prenom: e.target.Prenom.value,
+      date: e.target.Date.value,
+      email: e.target.Email.value,
+      adresse: e.target.Adresse.value,
+      telephone: e.target.Telephone.value,
+      demande: e.target.Demandes.value,
+    };
 
-  fetch(form.action, {
-    method: "POST",
-    body: new FormData(form),
-  }).then(() => {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
 
-    const message = document.getElementById("success-message");
+    if (response.ok) {
+      const message = document.getElementById("success-message");
 
-    message.classList.remove("hidden");
+      message.classList.remove("hidden");
 
-    setTimeout(() => {
-      message.classList.add("hidden");
-      form.reset();
-    }, 5000);
+      setTimeout(() => {
+        message.classList.add("hidden");
+      }, 8000);
 
-  });
-}}
-            className="space-y-8 md:space-y-10 max-w-3xl mx-auto"
+      e.target.reset();
+    }
+  }}
+
+              className="space-y-8 md:space-y-10 max-w-3xl mx-auto"
           >
-
-            {/* CONFIG MAIL */}
-            <input type="hidden" name="_captcha" value="false" />
-
-            <input
-              type="hidden"
-              name="_subject"
-              value="Nouvelle inscription FC Fleurus"
-            />
-
-            <input
-              type="hidden"
-              name="_next"
-              value="https://fc-fleurus.vercel.app/inscription"
-            />
 
             {/* NOM */}
             <div className="flex flex-col gap-3">
@@ -304,6 +301,26 @@ onSubmit={(e) => {
               />
 
             </div>
+
+{/* type de demande */}
+<div className="flex flex-col gap-3">
+
+  <label className="text-yellow-400 text-lg sm:text-xl md:text-2xl font-bold">
+    Type de demande :
+  </label>
+
+  <select
+    name="type"
+    required
+    className="w-full bg-zinc-950 border border-zinc-700 rounded-2xl px-6 py-5 text-white"
+  >
+    <option value="">Choisir</option>
+    <option value="Affiliation">Affiliation</option>
+    <option value="Stage">Stage</option>
+    <option value="Renseignement">Renseignement</option>
+  </select>
+
+</div>
 
             {/* DEMANDES */}
             <div className="flex flex-col gap-3">
