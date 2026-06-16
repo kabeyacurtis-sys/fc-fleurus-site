@@ -9,7 +9,7 @@ export default function EvenementsPage() {
       lien: "/evenements/programmes-entrainements",
     },
     {
-      titre: "Programme d'entrainement FC Fleurus",
+      titre: "Stage d'Été FC Fleurus",
       date: "10 août 2026",
       description:
         "Une semaine de football, jeux collectifs et perfectionnement pour les jeunes de 6 à 17 ans.",
