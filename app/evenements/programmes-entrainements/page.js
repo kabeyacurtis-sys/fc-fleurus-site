@@ -56,97 +56,199 @@ export default function ClubPage() {
 
       </section>
 
-      {/* INFOS */}
-      <section className="py-20 px-6">
+      {/* REPRISE */}
+<section className="py-20 px-6">
 
-        <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-8">
+  <div className="max-w-6xl mx-auto bg-zinc-900 rounded-3xl p-10 text-center border border-yellow-400">
 
-          <div className="bg-zinc-900 p-8 rounded-3xl">
-            <h3 className="text-yellow-400 text-2xl font-black mb-4">
-              DATES
-            </h3>
-            <p>06 → 10 juillet 2026</p>
-          </div>
+    <h2 className="text-5xl font-black text-yellow-400 mb-6">
+      REPRISE DES ENTRAÎNEMENTS
+    </h2>
 
-          <div className="bg-zinc-900 p-8 rounded-3xl">
-            <h3 className="text-yellow-400 text-2xl font-black mb-4">
-              ÂGES
-            </h3>
-            <p>6 à 17 ans</p>
-            <p>Garçons & Filles</p>
-          </div>
+    <p className="text-2xl font-bold text-white">
+      Lundi 10 août 2026
+    </p>
 
-          <div className="bg-zinc-900 p-8 rounded-3xl">
-            <h3 className="text-yellow-400 text-2xl font-black mb-4">
-              HORAIRES
-            </h3>
-            <p>09h00 - 15h30</p>
-            <p>Garderie 07h30 - 17h00</p>
-          </div>
+    <p className="text-zinc-300 text-lg mt-4">
+      Découvrez ci-dessous les horaires officiels de toutes les catégories du FC Fleurus.
+    </p>
 
-          <div className="bg-zinc-900 p-8 rounded-3xl">
-            <h3 className="text-yellow-400 text-2xl font-black mb-4">
-              TARIF
-            </h3>
-            <p className="text-3xl font-black">100€</p>
-          </div>
+  </div>
 
-        </div>
+</section>
 
-      </section>
+{/* HORAIRES */}
+<section className="bg-zinc-950 py-20 px-6">
 
-      {/* PROGRAMME */}
-      <section className="bg-zinc-950 py-20 px-6">
+  <div className="max-w-7xl mx-auto">
 
-        <div className="max-w-7xl mx-auto">
+    <h2 className="text-center text-5xl font-black text-yellow-400 mb-12">
+      HORAIRES DES ENTRAÎNEMENTS
+    </h2>
 
-          <h2 className="text-center text-5xl font-black text-yellow-400 mb-12">
-            AU PROGRAMME
-          </h2>
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-          <div className="grid md:grid-cols-5 gap-6">
+      <div className="bg-zinc-900 rounded-3xl p-8">
+        <h3 className="text-yellow-400 text-3xl font-black mb-4">U7</h3>
+        <p>Mardi : 17h30 - 18h45</p>
+        <p>Jeudi : 17h30 - 18h45</p>
+        <p>Match : Samedi 10h00</p>
+      </div>
 
-            {[
-              "Football",
-              "Ateliers techniques",
-              "Jeux collectifs",
-              "Développement moteur",
-              "Activités ludiques",
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="bg-zinc-900 p-8 rounded-2xl text-center"
-              >
-                {item}
-              </div>
-            ))}
+      <div className="bg-zinc-900 rounded-3xl p-8">
+        <h3 className="text-yellow-400 text-3xl font-black mb-4">U8</h3>
+        <p>Mardi : 17h30 - 18h45</p>
+        <p>Jeudi : 17h30 - 18h45</p>
+        <p>Match : Samedi 10h00</p>
+      </div>
 
-          </div>
+      <div className="bg-zinc-900 rounded-3xl p-8">
+        <h3 className="text-yellow-400 text-3xl font-black mb-4">U10</h3>
+        <p>Mercredi : 17h30 - 18h45</p>
+        <p>Vendredi : 17h30 - 18h45</p>
+        <p>Match : Samedi 10h00</p>
+      </div>
 
-        </div>
+      <div className="bg-zinc-900 rounded-3xl p-8">
+        <h3 className="text-yellow-400 text-3xl font-black mb-4">U12</h3>
+        <p>Mardi : 17h30 - 18h45</p>
+        <p>Jeudi : 17h30 - 18h45</p>
+        <p>Match : Dimanche 11h30</p>
+      </div>
 
-      </section>
+      <div className="bg-zinc-900 rounded-3xl p-8">
+        <h3 className="text-yellow-400 text-3xl font-black mb-4">U13</h3>
+        <p>Mercredi : 17h30 - 18h45</p>
+        <p>Vendredi : 17h30 - 18h45</p>
+        <p>Match : Dimanche 11h30</p>
+      </div>
 
-      {/* PROMOTIONS */}
-      <section className="py-20 px-6">
+      <div className="bg-zinc-900 rounded-3xl p-8">
+        <h3 className="text-yellow-400 text-3xl font-black mb-4">U14</h3>
+        <p>Mercredi : 18h45 - 20h00</p>
+        <p>Vendredi : 18h45 - 20h00</p>
+        <p>Match : Dimanche 09h30</p>
+      </div>
 
-        <div className="max-w-5xl mx-auto bg-yellow-400 text-black rounded-3xl p-12 text-center">
+      <div className="bg-zinc-900 rounded-3xl p-8">
+        <h3 className="text-yellow-400 text-3xl font-black mb-4">U16</h3>
+        <p>Mardi : 18h45 - 20h00</p>
+        <p>Jeudi : 17h30 - 18h45</p>
+        <p>Match : Samedi 14h00</p>
+      </div>
 
-          <h2 className="text-4xl font-black mb-6">
-            OFFRES PROMOTIONNELLES
-          </h2>
+      <div className="bg-zinc-900 rounded-3xl p-8">
+        <h3 className="text-yellow-400 text-3xl font-black mb-4">Réserve</h3>
+        <p>Mardi : 20h00 - 21h30</p>
+        <p>Jeudi : 19h00 - 20h30</p>
+        <p>Match : Samedi 16h30</p>
+      </div>
 
-          <p className="text-xl font-bold mb-3">
-            -10€ pour les membres du FC Fleurus
-          </p>
+      <div className="bg-zinc-900 rounded-3xl p-8">
+        <h3 className="text-yellow-400 text-3xl font-black mb-4">P4</h3>
+        <p>Mardi : 20h00 - 21h30</p>
+        <p>Jeudi : 20h00 - 21h30</p>
+        <p>Match : Samedi 20h00</p>
+      </div>
 
-          <p className="text-xl font-bold">
-            -10€ pour le deuxième enfant de la même famille
-          </p>
+    </div>
 
-        </div>
+  </div>
 
-      </section>
+</section>
+
+{/* GARDIENS & SPÉCIFIQUE */}
+<section className="py-20 px-6">
+
+  <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
+
+    <div className="bg-zinc-900 rounded-3xl p-8">
+      <h3 className="text-yellow-400 text-2xl font-black mb-4">
+        Gardiens Groupe 1
+      </h3>
+
+      <p>Mercredi</p>
+      <p>17h30 - 18h45</p>
+      <p>U8 - U10 - U12</p>
+    </div>
+
+    <div className="bg-zinc-900 rounded-3xl p-8">
+      <h3 className="text-yellow-400 text-2xl font-black mb-4">
+        Gardiens Groupe 2
+      </h3>
+
+      <p>Mercredi</p>
+      <p>18h45 - 20h00</p>
+      <p>U13 - U14 - U16</p>
+    </div>
+
+    <div className="bg-zinc-900 rounded-3xl p-8">
+      <h3 className="text-yellow-400 text-2xl font-black mb-4">
+        Spécifique Technique
+      </h3>
+
+      <p>Mercredi : 18h45 - 20h00</p>
+      <p>Vendredi : 17h30 - 18h45</p>
+    </div>
+
+  </div>
+
+</section>
+
+{/* COTISATION */}
+<section className="py-20 px-6">
+
+  <div className="max-w-5xl mx-auto bg-yellow-400 text-black rounded-3xl p-12 text-center">
+
+    <h2 className="text-4xl font-black mb-8">
+      COTISATION SAISON 2026 - 2027
+    </h2>
+
+    <p className="text-5xl font-black mb-8">
+      350 €
+    </p>
+
+    <div className="space-y-4 text-xl font-bold">
+
+      <p>
+        ✅ Acompte de <span className="font-black">150 €</span> à payer avant le
+        <span className="font-black"> 15 juillet 2026</span>
+      </p>
+
+      <p>
+        ✅ Solde restant de <span className="font-black">200 €</span> à payer
+        avant le <span className="font-black">15 août 2026</span>
+      </p>
+
+      <div className="mt-8 bg-black/10 rounded-2xl p-6">
+
+        <p className="text-2xl font-black mb-3">
+          Compte bancaire
+        </p>
+
+        <p className="text-3xl font-black mb-4">
+          BE93 9640 1087 7567
+        </p>
+
+        <p className="text-lg font-bold">
+          Communication :
+        </p>
+
+        <p className="text-lg">
+          Nom + prénom + année de naissance de l'enfant
+        </p>
+
+      </div>
+
+      <p className="mt-8 text-lg">
+        Les équipements et packs du club seront remis uniquement après le paiement complet de la cotisation.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
 
 {/* FORMULAIRE */}
 <section
