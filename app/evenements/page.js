@@ -1,16 +1,16 @@
 export default function EvenementsPage() {
   const events = [
     {
-      titre: "Stage d'Été FC Fleurus",
-      date: "06 juillet 2026 - 10 juillet 2026",
+      titre: "Programme d'entrainement FC Fleurus",
+      date: "10 août 2026",
       description:
-        "Une semaine de football, jeux collectifs et perfectionnement pour les jeunes de 6 à 17 ans.",
+        "Les entraînements du FC Fleurus reprendront dès le 10 août 2026. Rejoignez-nous pour une saison placée sous le signe du football, de la progression, du plaisir et de la passion, pour les jeunes.",
       image: "/stage2.png",
-      lien: "/evenements/stage-juillet",
+      lien: "/evenements/programmes-entrainements",
     },
     {
-      titre: "Stage d'Été FC Fleurus",
-      date: "03 août 2026 - 07 août 2026",
+      titre: "Programme d'entrainement FC Fleurus",
+      date: "10 août 2026",
       description:
         "Une semaine de football, jeux collectifs et perfectionnement pour les jeunes de 6 à 17 ans.",
       image: "/stage1.png",
@@ -29,9 +29,6 @@ export default function EvenementsPage() {
     className="absolute inset-0 w-full h-full object-cover"
   />
 </div>
-
-{/* OVERLAY */}
-<div className="fixed inset-0 bg-black/50 -z-10"></div>
 
       {/* OVERLAY */}
       <div className="fixed inset-0 bg-black/70 -z-10"></div>
