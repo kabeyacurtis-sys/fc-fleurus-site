@@ -33,7 +33,7 @@ export default function EntraineursPage() {
       photo: "/noir.png",
     },
     {
-      nom: "Micheal Mercier",
+      nom: "Michael Mercier",
       categorie: "U13",
       fonction: "Éducateur",
       photo: "/MichaelMercier.jpg",
